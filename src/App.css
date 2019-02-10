@@ -21,7 +21,7 @@
 
 .Button {
   background-color: #FF69B4;
-  font-size: 100px;
+  font-size: 10vh;
   padding: 30px;
   border-radius: 48px;
   -webkit-transition-duration: 0.4s;
