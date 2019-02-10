@@ -67,7 +67,7 @@ class App extends Component {
                 }
             }
           } else {
-              button1 = <Button className="Button" color ="pink" shadowsize={2} onClick={this.handleAloitaClick.bind(this)} >ALOITA</Button>;
+              button1 = <Button className="Button" color ="pink" shadowsize={2} onClick={this.handleAloitaClick.bind(this)} >aloita!</Button>;
           }
     return (
 
