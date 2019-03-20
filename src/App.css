@@ -3,12 +3,11 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 30vmin;
+  height: 10vmin;
 }
 
 .App-header {
-  background-color: #0078D7;
+  background-color: #FFFFFF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,13 +15,22 @@
   padding-top: 5vh;
 /*  justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000000;
 }
 
 .Button {
-  background-color: #FF69B4;
+  width: 380px;
+  background-color: #5be6ff;
   font-size: 8vh;
   border-radius: 48px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.Button2 {
+  width: 100px;
+  background-color: #5be6ff;
+  font-size: 2vh;
+  border-radius: 12px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
@@ -36,7 +44,46 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
+.page {
+  margin: 20px;
+}
+.interactions {
+  text-align: center;
+}
+.table {
+  margin: 20px 0;
+}
+.table-header {
+  display: flex;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+.table-empty {
+  margin: 200px;
+  text-align: center;
+  font-size: 16px;
+}
+.table-row {
+  display: flex;
+  line-height: 24px;
+  white-space: nowrap;
+  margin: 10px 0;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+}
+.table-header > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 5px;
+}
+.table-row > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 5px;
+}
 .App-link {
   color: #FF69B4;
 }
