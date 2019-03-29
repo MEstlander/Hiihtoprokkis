@@ -124,10 +124,10 @@ class App extends Component {
                     item.points = item.points + value;
                 }
                 if (para === 'hinta') {
-                    if(item.hinta > 0 && i == 0) {
+                    if(item.hinta > 0.00 && i == 0) {
                         item.points = item.points + value;
                     }
-                    if(item.hinta === 10){
+                    if(item.hinta === 0){
                         item.points = item.points + value;
                     }
                 }
@@ -328,11 +328,11 @@ class App extends Component {
             button2 = <Button className="Button" onClick={this.handleKaukanaClick.bind(this, 1)}>liikaa</Button>;
             button4 = <Button className="Button2" onClick={this.handleKaukanaClick.bind(this,2)}>Ihassama</Button>;
         }
-            if(Hinta) {
-            button1 = <Button className="Button" onClick={this.handleHintaClick.bind(this,0)}>kyllä</Button>;
+        if(Hinta) {
+            button1 = <Button className="Button" onClick={this.handleHintaClick.bind(this,1)}>kyllä</Button>;
             vai = <p>Suostun maksaa liikunasta</p>;
-            button2 = <Button className="Button" onClick={this.handleHintaClick.bind(this,1)}>ei</Button>;
-                button4 = <Button className="Button2" onClick={this.handleHintaClick.bind(this,2)}>Ihassama</Button>;
+            button2 = <Button className="Button" onClick={this.handleHintaClick.bind(this,0)}>ei</Button>;
+            button4 = <Button className="Button2" onClick={this.handleHintaClick.bind(this,2)}>Ihassama</Button>;
         }
         if(Valine) {
             button1 = <Button className="Button" onClick={this.handleValineClick.bind(this,0)}>tehtävissä</Button>;
