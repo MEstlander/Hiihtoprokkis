@@ -113,36 +113,40 @@ class App extends Component {
     }
     updatePoints(para, i, value) {
         this.setState( this.state.lajit.map(item=> {
-            if (para === 'yksin' && item.yksin == i) {
-                item.points = item.points + value;
+            if (2 == i) {
+
             }
-            if (para === 'kaukana' && item.kaukana == i) {
-                item.points = item.points + value;
-            }
-            if (para === 'hinta') {
-                if(item.hinta > 0 && i == 0) {
+            else{
+                if (para === 'yksin' && item.yksin == i) {
                     item.points = item.points + value;
                 }
-                if(item.hinta === 10){
+                if (para === 'kaukana' && item.kaukana == i) {
                     item.points = item.points + value;
                 }
-            }
-            if (para === 'valine' && item.valine == i) {
-                item.points = item.points + value;
-            }
-            if (para === 'sisalla' && item.sisalla == i) {
-                item.points = item.points + value;
-            }
-            if (para === 'Hiki' && item.intensiivinen == i) {
-                item.points = item.points + value;
-            }
-            if (para === 'Eksotik' && item.Eksoottinen == i) {
-                item.points = item.points + value;
-            }
-            if (para === 'ohjatusti' && item.ohjattu == i) {
-                item.points = item.points + value;
-            }
-        }))
+                if (para === 'hinta') {
+                    if(item.hinta > 0 && i == 0) {
+                        item.points = item.points + value;
+                    }
+                    if(item.hinta === 10){
+                        item.points = item.points + value;
+                    }
+                }
+                if (para === 'valine' && item.valine == i) {
+                    item.points = item.points + value;
+                }
+                if (para === 'sisalla' && item.sisalla == i) {
+                    item.points = item.points + value;
+                }
+                if (para === 'Hiki' && item.intensiivinen == i) {
+                    item.points = item.points + value;
+                }
+                if (para === 'Eksotik' && item.Eksoottinen == i) {
+                    item.points = item.points + value;
+                }
+                if (para === 'ohjatusti' && item.ohjattu == i) {
+                    item.points = item.points + value;
+                }
+        }}))
     };
     onDismiss(id){
         const lajit = this.state.lajit
@@ -283,7 +287,7 @@ class App extends Component {
             this.state.Kaukana, this.state.Hinta, this.state.Valine, this.state.Sisalla, this.state.Hiki,
             this.state.Eksotik, this.state.ohjatusti,  this.state.Final, this.state.lajit];
         let button1,button2,vai;
-        let button4 = <Button className="Button2" onClick={this.handleYksinClick.bind(this,2)}>Ihassama</Button>;
+        let button4;
         let button3 = <Button className="Button2" onClick={this.handleEndClick.bind(this)}>Loppuun?</Button>;
         let slice = 0;
         let TableHeader1 = () => <div/>;
@@ -315,42 +319,50 @@ class App extends Component {
             vai = <p>Yksin vai Ryhmässsä?</p>;
             button2 = <Button className="Button" onClick={this.handleYksinClick.bind(this, 1)}>Ryhmässä</Button>
             button3 = <Button className="Button2" onClick={this.handleEndClick.bind(this)}>Loppuun?</Button>
+            button4 = <Button className="Button2" onClick={this.handleYksinClick.bind(this,2)}>Ihassama</Button>;
 
         }
         if(Kaukana) {
             button1 = <Button className="Button" onClick={this.handleKaukanaClick.bind(this, 0)}>ihan ok</Button>;
             vai = <p>Yli 20 min matka on</p>;
             button2 = <Button className="Button" onClick={this.handleKaukanaClick.bind(this, 1)}>liikaa</Button>;
+            button4 = <Button className="Button2" onClick={this.handleKaukanaClick.bind(this,2)}>Ihassama</Button>;
         }
             if(Hinta) {
             button1 = <Button className="Button" onClick={this.handleHintaClick.bind(this,0)}>kyllä</Button>;
             vai = <p>Suostun maksaa liikunasta</p>;
             button2 = <Button className="Button" onClick={this.handleHintaClick.bind(this,1)}>ei</Button>;
+                button4 = <Button className="Button2" onClick={this.handleHintaClick.bind(this,2)}>Ihassama</Button>;
         }
         if(Valine) {
             button1 = <Button className="Button" onClick={this.handleValineClick.bind(this,0)}>tehtävissä</Button>;
             vai = <p>Lisävälineet ovat minulle</p>;
             button2 = <Button className="Button" onClick={this.handleValineClick.bind(this,1)}>liikaa</Button>;
+            button4 = <Button className="Button2" onClick={this.handleValineClick.bind(this,2)}>Ihassama</Button>;
         }
         if(Sisalla) {
             button1 = <Button className="Button" onClick={this.handleSisallaClick.bind(this,0)}>sisällä</Button>;
             vai = <p>Liikun mieluummin</p>;
             button2 = <Button className="Button" onClick={this.handleSisallaClick.bind(this,1)}>ulkona</Button>;
+            button4 = <Button className="Button2" onClick={this.handleSisallaClick.bind(this,2)}>Ihassama</Button>;
         }
         if(Hiki) {
             button1 = <Button className="Button" onClick={this.handleHikiClick.bind(this,0)}>helppoa</Button>;
             vai = <p>Liikunann tulee olla</p>;
             button2 = <Button className="Button" onClick={this.handleHikiClick.bind(this,1)}>rankkaa</Button>;
+            button4 = <Button className="Button2" onClick={this.handleHikiClick.bind(this,2)}>Ihassama</Button>;
         }
         if(Eksotik) {
             button1 = <Button className="Button" onClick={this.handleEksotikClick.bind(this,0)}>perinteistä</Button>;
             vai = <p>Haluan jotain</p>;
             button2 = <Button className="Button" onClick={this.handleEksotikClick.bind(this,1)}>eksoottista</Button>;
+            button4 = <Button className="Button2" onClick={this.handleEksotikClick.bind(this,2)}>Ihassama</Button>;
         }
         if(ohjatusti) {
             button1 = <Button className="Button" onClick={this.handleOhjatustiClick.bind(this,0)}>itsenäisesti</Button>;
             vai = <p>Haluan liikua</p>;
             button2 = <Button className="Button" onClick={this.handleOhjatustiClick.bind(this,1)}>ohjatusti</Button>;
+            button4 = <Button className="Button2" onClick={this.handleOhjatustiClick.bind(this,2)}>Ihassama</Button>;
         }
         if(Final) {
             slice = 3
