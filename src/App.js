@@ -309,7 +309,7 @@ class App extends Component {
             )}
             </div>;
         if(Aloita) {
-            vai = <p>'Tervetuloa Aloittamaan!'</p>
+            vai = <p>Tervetuloa Aloittamaan!</p>
             button1 = <Button className="Button" onClick={this.handleAloitaClick.bind(this)}>Aloita!</Button>
             button4 = ''
 
@@ -347,8 +347,8 @@ class App extends Component {
             button4 = <Button className="Button2" onClick={this.handleSisallaClick.bind(this,2)}>Ihassama</Button>;
         }
         if(Hiki) {
-            button1 = <Button className="Button" onClick={this.handleHikiClick.bind(this,0)}>helppoa</Button>;
-            vai = <p>Liikunann tulee olla</p>;
+            button1 = <Button className="Button" onClick={this.handleHikiClick.bind(this,0)}>kevyttä</Button>;
+            vai = <p>Liikunnan tulee olla</p>;
             button2 = <Button className="Button" onClick={this.handleHikiClick.bind(this,1)}>rankkaa</Button>;
             button4 = <Button className="Button2" onClick={this.handleHikiClick.bind(this,2)}>Ihassama</Button>;
         }
