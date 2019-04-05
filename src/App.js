@@ -330,7 +330,7 @@ class App extends Component {
         }
         if(Hinta) {
             button1 = <Button className="Button" onClick={this.handleHintaClick.bind(this,1)}>kyllä</Button>;
-            vai = <p>Suostun maksaa liikunasta</p>;
+            vai = <p>Suostun maksamaan liikunasta</p>;
             button2 = <Button className="Button" onClick={this.handleHintaClick.bind(this,0)}>ei</Button>;
             button4 = <Button className="Button2" onClick={this.handleHintaClick.bind(this,2)}>Ihassama</Button>;
         }
